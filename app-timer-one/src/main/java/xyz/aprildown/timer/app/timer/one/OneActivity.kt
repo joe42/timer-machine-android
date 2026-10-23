@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.core.app.ActivityCompat
 import androidx.navigation.fragment.NavHostFragment
 import dagger.hilt.android.AndroidEntryPoint
+import xyz.aprildown.timer.app.base.data.PreferenceData.showOnLockScreen
 import xyz.aprildown.timer.app.base.data.PreferenceData.storedAudioTypeValue
 import xyz.aprildown.timer.app.base.ui.BaseActivity
 import xyz.aprildown.timer.app.base.utils.ScreenWakeLock
@@ -40,6 +41,9 @@ class OneActivity : BaseActivity(), OneActivityInterface {
         }
 
         volumeControlStream = storedAudioTypeValue
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1) {
+            setShowWhenLocked(showOnLockScreen)
+        }
 
         viewModel.setTimerId(
             intent?.getIntExtra(Constants.EXTRA_TIMER_ID, TimerEntity.NULL_ID)

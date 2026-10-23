@@ -679,6 +679,10 @@
     <string name="pref_show_timer_total_time_on">Show the total time of the timer and groups</string>
     <string name="pref_show_timer_total_time_off">Hide it</string>
 
+    <string name="pref_show_on_lock_screen_title">Show timer on lock screen</string>
+    <string name="pref_show_on_lock_screen_on">Enabled</string>
+    <string name="pref_show_on_lock_screen_off">Disabled</string>
+
     <!--Use the previously generated speech synthesis file instead of synthesizing the voice every time. Similar to caching.-->
     <string name="pref_tts_bakery">Text-to-speech bakery</string>
     <string name="pref_tts_bakery_off">Generate the audio file of every Text-to-speech content for a quick speech afterward</string>

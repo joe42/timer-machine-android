@@ -34,6 +34,15 @@
             app:title="@string/pref_screen_title"
             app:useSimpleSummaryProvider="true" />
 
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:icon="@drawable/settings_brightness"
+            app:key="key_show_on_lock_screen"
+            app:singleLineTitle="false"
+            app:summaryOff="@string/pref_show_on_lock_screen_off"
+            app:summaryOn="@string/pref_show_on_lock_screen_on"
+            app:title="@string/pref_show_on_lock_screen_title" />
+
         <ListPreference
             app:defaultValue="@string/pref_screen_timing_value_default"
             app:entries="@array/pref_screen_timing_titles"

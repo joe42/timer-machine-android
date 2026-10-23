@@ -124,6 +124,14 @@ object PreferenceData {
 
     // endregion Show Timer Total Time
 
+    // region Show On Lock Screen
+
+    const val KEY_SHOW_ON_LOCK_SCREEN = "key_show_on_lock_screen"
+    val Context.showOnLockScreen: Boolean
+        get() = safeSharedPreference.getBoolean(KEY_SHOW_ON_LOCK_SCREEN, false)
+
+    // endregion Show On Lock Screen
+
     // region Week Start
 
     /**
